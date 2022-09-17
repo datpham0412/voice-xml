@@ -1,0 +1,38 @@
+@media screen and (max-width: 768px){
+	aside p {
+		text-align: left;
+		font-size: 80%;
+	}
+	img.resize {
+		max-width: 100%;
+	}
+	div.fieldset {
+    	width: 85%;
+    	padding: 15px;
+    } 
+	#image_para {
+    	top: 36%;
+    }
+      
+}
+
+@media screen and (max-width: 360px){
+	h1 {text-align: center;}
+	nav {
+		float: none;
+		clear: left;
+		width: 100%;
+	}
+	nav ul li a {
+		text-align: center;
+		font-size: 85%;
+	}
+	nav ul {
+		margin: 0;
+		padding: 0;
+	}
+	nav ul li {
+		width: 30%;
+	}
+	
+}

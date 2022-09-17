@@ -1,0 +1,299 @@
+/*	
+	filename:assign1_style.css
+	author: Dat Pham
+	created: 5 March, 2022
+	last modified: 23 March , 2022
+	description: assign1
+*/
+* {font-family: Arial, Helvetica, sans-serif;}
+* {color: #060c0c; text-align: justify;}
+
+/* This is for body */
+body {     
+    z-index: -1;
+    background-image: url(images/BG.webp);
+    text-align: center; /* determines how text in an element should be aligned horizontally */
+}
+/* This is for body */
+
+/* This is for header */
+header {
+    background-color: rgb(7, 8, 8);
+    padding: 0px 10px; /* To make room for the content of an element, use padding*/
+   	position: relative; /* relative is used to place relative compared to normal position */
+    top: 0px;
+    z-index: 1;
+    margin-top: 0
+}
+
+
+
+
+/* This is for "nav" */
+nav{ 
+	background-color: rgb(5, 12, 14);
+	font-size: large;
+	text-align: center;
+}
+nav h1{ /* decor the heading */
+    display : inline-block; /* display element in block forms but condense it in 1 line */
+
+}
+nav ul { /* Decor elements in list of main page*/
+    margin: 0px; /* To provide room for components, use margin*/
+    padding: 0; /* To make room for the content of an element, use padding*/
+    list-style: none; /* I dont want the element of the list has any marks like circle or square */
+}
+nav .navbar>li { /* display each element of the list on one line */
+    display: inline-block; /* display element in block forms but condense it in 1 line */
+}
+nav a {
+    padding: 15px 15px 15px 15px;
+    display: inherit; /*	Inherits this property from its parent element. */
+    position: relative;
+    text-decoration: none;
+    color:#f8fcf9;
+    background: #6c6ef1;
+}
+nav li:hover>a { /* this one will light up the elements when I move my mouse over it */
+    background: rgb(0, 45, 128);
+    background-color:rgb(177, 173, 230); 
+    color:black;
+    transition: 1s; /* it spends 1 second to coloring the block */
+}
+/* To condense the bar in main menu */
+nav .small_navbar, nav .small_navbar2 { 
+    position: absolute;
+    display: none; /* not display the element in navbar */
+    
+}
+/* Same as above */
+nav .small_navbar a, nav .small_navbar2 a {
+    background-color: #6c6ef1;
+    border: 1px solid rgb(17, 10, 10);
+    color:rgb(245, 243, 243);
+}
+
+/* Display all sub elements in main elements as a block */
+nav .navbar>li:hover .small_navbar, nav .small_navbar>li:hover .small_navbar2 {
+    display: block; 
+}
+/* Display the sub elements on the right hand side instead of in the bottom of main elements */
+nav .small_navbar2 {
+    transform: translate(101%,0); /*The translate() function relocates an element from its present location (according to the parameters given for the X-axis and the Y-axis). */
+	top: 1px;
+    right: 1px;
+}
+nav .small_navbar li {
+	position: sticky;
+}
+
+/* This is for creating hover animation for small navbar */
+
+.small_navbar li:hover>a, .small_navbar2 li:hover>a {
+    background-color: lightgray;
+    background-color:rgb(177, 173, 230);
+    color:rgb(0, 0, 0);
+    transition: 1s;
+}
+
+/* This is for creating hover animation for small navbar */
+
+/* This is for first heading */
+
+
+/* This is for first heading */
+h1 {
+    font-family: "Bahnschrift SemiBold", sans-serif;
+    color: white;
+    font-size : 300%; /* Make it 3 times bigger */
+    margin: 5px;
+    
+}
+/* This is for footer */
+
+    /* For the email address at the end of the page */
+footer {
+    text-align: center;
+    text-decoration: none;
+    background-color: white;
+    font-family: "Bahnschrift SemiBold";
+    max-width: 100%; /* Requirements : footer full page width */
+}
+    /*For the line under the email address */
+footer a { 
+    color: rgb(248, 248, 248); 
+    font-weight: bold;
+    font-size: 1em;
+}
+
+/* This is for the images */
+img {
+    display: block;
+    margin-left: calc(50%);
+    transform: translate(-50%); /* Make the image locate in the middle of the page */
+    height: 700px;
+    width: auto;
+}
+.IT{
+    height : 300px;
+    width : 300px;
+}
+#blur {
+    filter: blur(5px);
+    z-index: -1; 
+    opacity: 0.8; /* It indicates the transparency of the image */
+}
+
+/* This part is for the text in the about VoiceXML section */
+section#image_para h2, section#image_para p{
+    color: white;
+    font-family: "Bahnschrift SemiBold", sans-serif;
+    text-align: justify; 
+}
+
+    /* This is for display the text about VoiceXML in the main page */
+
+    /* This part is for image */
+#image_para { 
+    font-weight: 600; /* Thickening the text */
+    padding: 40px;
+    background-color: rgb(55, 90, 104); 
+    border: 5px solid #f8f4f4;
+    position: absolute;
+    top: 55%; /* Make it stay at the middle */
+    left: 52%; /* Make it stay at the middle */
+    transform: translate(-50%, -50%); 
+    z-index: 0;
+    width: 40%;
+    text-align: justify;
+} 
+
+.fieldset {
+    line-height: 1.5em;
+    z-index: -1;
+    width: 65%;
+    margin: auto;
+    background-color: white;
+    padding: 80px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 3px solid black;
+    box-shadow: 2px 2px 8px #c7a3a3, 
+    -2px 2px 8px #867373, 
+    2px -2px 8px #f8dede, 
+    -2px -2px 8px #f3ebeb;
+}
+
+article {
+    min-width: 40%;
+}
+
+/* Follow requirements : Aside 30% viewport width, floats right, colour border */
+aside {
+    float: right;
+    width: 30%;
+    margin-left: 30px;
+    border-style: dashed;
+    border-color: rgb(5, 10, 5);
+    padding: 10px;
+    background-color: #97d5ee;
+}
+.ECMA{ /* class of the image in topic 1 */
+    width: 80%; /* Resize the image */
+    height: 80%;
+}
+figcaption { /* This is for the caption of the picture in topic 1 */
+    text-align: center;
+    font-weight: bold;
+    color :rgb(204, 46, 46);
+    font-style: italic;
+    font-size: 1.1em;
+}
+/*This part is for table*/
+#table { /* Main Table */
+    border-collapse: separate; /* Set the collapsing model */
+    width: 80%;
+}
+table, td, th{ /* Feature for table */
+    border: 2px solid;
+    padding: 10px;
+    box-shadow: 2px 2px 8px #969090, 
+    -2px 2px 8px #969090, 
+    2px -2px 8px #969090, 
+    -2px -2px 8px #969090;
+}
+
+/* Pseudo code class */
+tr:nth-child(even) /* For Zebra Striped table */
+{
+    background-color: lightgray;
+}
+th {
+    border : none;
+    color: black;
+    font-size: 1.1em;
+    text-align: center;
+}
+.QUIZ{
+    font-size: 2em;
+}
+/* This part is for storing color data */
+.light_red {
+    font-weight: bold;
+    color: rgba(228, 84, 84, 0.979);
+    font-size: 1.6em;
+}
+.light_blue{
+    font-weight: bold;
+    color: rgb(64, 64, 204);
+    font-size: 1.1em;
+    font-style: italic;
+
+}
+/* Psuedo code for coding flipping the image, source on https://www.w3schools.com/howto/howto_css_flip_image.asp */
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+    background-color: transparent;
+    width: 1000px; 
+    height: 500px;
+    border: 0px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+ 
+  
+  /* Style the back side */
+  .flip-box-back {
+    background-color: transparent;
+    color: white;
+    transform: rotateY(180deg);
+}
+/* Psuedo code for coding flipping the image, source on https://www.w3schools.com/howto/howto_css_flip_image.asp */
+  
+  
